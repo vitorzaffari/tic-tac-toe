@@ -4,7 +4,7 @@
   [![Portuguese](https://img.shields.io/badge/Idioma-Português-brightgreen.svg)](README.pt-br.md)
   
   A simple Tic Tac Toe game built with React.
-  Not available for small screen sizes
+
   ## How to Play
   
   Clone the repo:
