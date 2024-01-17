@@ -26,13 +26,13 @@
             align-items: center;
             justify-content: center;
             margin: .4rem;
-            width: 150px;
-            height: 150px;
+            width: 120px;
+            height: 120px;
             transition: background-color 200ms ease;
 
             .square-symbol{
                 font-weight: 200;
-                font-size: 8rem;
+                font-size: 6rem;
                 color: blanchedalmond;
                 text-shadow: 5px 5px 5px #00000040;
             }
