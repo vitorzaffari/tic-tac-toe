@@ -1,0 +1,15 @@
+.tictactoe-description {
+    /*Layout*/
+    width: 652px;
+    flex-shrink: 0;
+    margin: 2rem auto;
+
+    /*Typography*/
+    color: #FFF;
+    text-align: center;
+    font-family: Outfit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+}

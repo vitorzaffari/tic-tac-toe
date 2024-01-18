@@ -1,0 +1,47 @@
+.container {
+    display: flex;
+    margin: 2rem auto;
+    justify-content: space-around;
+
+
+
+
+
+
+    & .mode-select-button {
+
+        background-color: transparent;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+
+        & img {
+            transition: opacity 300ms ease;
+            width: 350px;
+            opacity: .5;
+            margin-bottom: 10px;
+        }
+
+        & p {
+            transition: background-color 300ms ease;
+            padding: 14px 1.5rem;
+            font-size: 1rem;
+            margin: 0 auto;
+            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.20);
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
+        }
+    }
+}
+
+.mode-select-button:hover{
+
+    img{
+        opacity: 1;
+    }
+    p{
+        background: rgba(255, 255, 255, 0.30);
+    }
+
+}
