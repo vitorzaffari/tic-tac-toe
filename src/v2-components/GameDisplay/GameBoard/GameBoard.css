@@ -1,0 +1,12 @@
+.game-board-component{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    margin: 4rem;
+
+    & .row{
+        gap: .5rem;
+        margin: 0 auto;
+        display: flex;
+    }
+}

@@ -6,8 +6,6 @@ import SmallTextBox from '../SmallTextBox/SmallTextBox';
 const SelectGameMode = ({changeGameMode}) => {
 
 
-
-
     return (
         <div>
             <SmallTextBox text={'Select one'} />

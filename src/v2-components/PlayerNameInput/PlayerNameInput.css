@@ -1,0 +1,75 @@
+.player-name-input-component {
+    display: flex;
+    gap: 2rem;
+    width: fit-content;
+    margin-top: 50px;
+
+    & .input-wrap {
+        /* Layout */
+        display: flex;
+        flex-direction: column;
+
+        & .player-name-label {
+
+            /* Typography */
+            color: #FFF;
+            text-align: center;
+            margin-bottom: 15px;
+            font-family: Outfit;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+        }
+
+
+        & .player-name-input {
+            /* Typography */
+            color: #FFF;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 200;
+            line-height: normal;
+            text-align: center;
+
+            border: none;
+            outline: none;
+            padding: .8rem;
+            border-radius: 7px;
+            background: rgba(255, 255, 255, 0.20);
+        }
+    }
+
+    & .symbol-wrap {
+
+        & .player-symbol-label {
+
+            /* Typography */
+            color: #FFF;
+            text-align: center;
+            margin-bottom: 15px;
+            font-family: Outfit;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+        }
+
+        & .player-symbol-p {
+
+            /* Typography */
+            color: #FFF;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 200;
+            line-height: normal;
+            text-align: center;
+
+            border: none;
+            outline: none;
+            padding: .8rem;
+            border-radius: 7px;
+            background: rgba(255, 255, 255, 0.20);
+        }
+    }
+}
