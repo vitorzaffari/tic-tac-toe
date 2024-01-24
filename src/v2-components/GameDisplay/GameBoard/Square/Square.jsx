@@ -1,8 +1,8 @@
 import './Square.css'
 
-const Square = ({value, handleNewMove}) => {
+const Square = ({value, handleNewMove, isWinningSquare}) => {
   return (
-    <div className='square' onClick={handleNewMove}><span>{value}</span></div>
+    <button className={`square ${isWinningSquare && 'winning-square'}`} onClick={handleNewMove}><span>{value}</span></button>
   )
 }
 

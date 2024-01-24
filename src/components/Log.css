@@ -31,29 +31,6 @@
 
 
 
- /* width */
- ::-webkit-scrollbar {
-    width: 5px;
-    border-radius: 5px;
-}
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #c20c0c00;
-    border-radius: 5px;
-
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #414141;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555;
-  } 
-
 
 
 @keyframes popin {
