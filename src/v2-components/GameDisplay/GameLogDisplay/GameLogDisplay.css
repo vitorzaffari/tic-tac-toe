@@ -14,40 +14,45 @@
     background: rgba(217, 217, 217, 0.05);
     margin: 0 auto;
 
-    & .single-log{
-        /* border: 1px solid red; */
+    & .single-log {
+        font-weight: 200;
         opacity: .3;
-    transition: opacity 300ms ease ;        
-        &:hover{
+        transition: opacity 300ms ease;
+
+        &:hover {
             opacity: 1;
         }
     }
 }
 
-.game-log-display-component p:first-child{
+.game-log-display-component p:first-child {
+    font-size: 1.2rem;
     opacity: 1;
     animation: popin 1000ms ease forwards;
 
 }
 
-.game-log-display-component p:nth-child(2){
+.game-log-display-component p:nth-child(2) {
     opacity: .8;
 }
-.game-log-display-component p:nth-child(3){
+
+.game-log-display-component p:nth-child(3) {
     opacity: .6;
 }
-.game-log-display-component p:nth-child(4){
+
+.game-log-display-component p:nth-child(4) {
     opacity: .4;
 }
 
 
 
 @keyframes popin {
-    0%{
+    0% {
         opacity: 0;
         transform: translateX(-10px);
     }
-    100%{
+
+    100% {
         opacity: 1;
         transform: translateX(0);
     }
