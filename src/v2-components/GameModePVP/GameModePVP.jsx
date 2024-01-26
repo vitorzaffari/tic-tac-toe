@@ -5,7 +5,7 @@ import PVPimage2 from '../../assets/man-vs-woman-2.png'
 import './GameModePVP.css'
 import GameDisplay from '../GameDisplay/GameDisplay'
 
-const GameModePVP = () => {
+const GameModePVP = ({backToMainMenu}) => {
   const [playersInfo, setPlayersInfo] = useState(
     {
       player1: 'Player 1',
@@ -35,7 +35,7 @@ const GameModePVP = () => {
         </>
       }
 
-      {isGameActive && <GameDisplay playersInfo={playersInfo}/>}
+      {isGameActive && <GameDisplay playersInfo={playersInfo} backToMainMenu={backToMainMenu}/>}
     </div>
   )
 }

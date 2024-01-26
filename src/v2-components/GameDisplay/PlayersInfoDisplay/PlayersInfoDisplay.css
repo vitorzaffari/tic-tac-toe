@@ -1,20 +1,77 @@
-.player-info-display-component{
+.player-info-display-component {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: end;
 
-    & .current-player-info-wrap{
-        text-align: center;
-        width: 200px;
-
-        & p{
-            font-size: 1.2rem;
+    & .current-player-info-wrap {
+        & p {
+            font-size: 2rem;
             font-weight: 200;
         }
-        & .wrap{
+
+        & .wrap {
             width: fit-content;
             margin: 5px auto 0;
             display: flex;
             gap: .5rem;
+
+            & p {
+                font-size: 1.8rem;
+                background-color: rgba(240, 248, 255, 0.26);
+                padding: .2rem .8rem;
+                border-radius: 8px;
+            }
+        }
+    }
+
+    & .next-player-info-wrap {
+        text-align: center;
+        width: 200px;
+
+        & p {
+            font-size: 1.2rem;
+            font-weight: 200;
+        }
+
+        & .wrap {
+            width: fit-content;
+            margin: 5px auto 0;
+            display: flex;
+            gap: .5rem;
+        }
+
+    }
+}
+
+
+.winner-container {
+
+    .winner-message {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .btns-wrap {
+        display: flex;
+        margin: 1rem auto 0;
+        width: fit-content;
+        align-items: center;
+        gap: .6rem;
+        font-size: 1.2rem;
+
+        & button {
+            background-color: #FFFFFF30;
+            padding: .4rem 1rem;
+            border: none;
+            border-radius: 8px;
+            outline: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 200ms ease;
+
+            &:hover {
+                background-color: #FFFFFF40;
+            }
         }
 
     }

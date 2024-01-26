@@ -1,6 +1,6 @@
 import './PlayerNameInput.css'
 
-const PlayerNameInput = ({ order, defaultName, defaultSymbol, property, changePlayerInfo, playersInfo }) => {
+const PlayerNameInput = ({ order, defaultName, defaultSymbol, property, changePlayerInfo, playersInfo, isRobot=false }) => {
 
 
   let inputContent = 
@@ -8,7 +8,7 @@ const PlayerNameInput = ({ order, defaultName, defaultSymbol, property, changePl
     <label 
     className='player-name-label' 
     htmlFor={defaultName}
-    >Enter {defaultName.toLowerCase()} name</label>
+    >{isRobot ? 'Robot name' : `Enter ${defaultName.toLowerCase()} name`}</label>
 
     <input 
     className='player-name-input' 
