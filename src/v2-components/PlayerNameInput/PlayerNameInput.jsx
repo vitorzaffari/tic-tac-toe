@@ -1,21 +1,29 @@
+import { useRef } from 'react'
 import './PlayerNameInput.css'
 
-const PlayerNameInput = ({ order, defaultName, defaultSymbol, property, changePlayerInfo, playersInfo, isRobot=false }) => {
+const PlayerNameInput = ({ order, defaultName, defaultSymbol, property, changePlayerInfo, playersInfo, isRobot = false }) => {
 
+  let inputRef = useRef(null)
 
-  let inputContent = 
-  <div className="input-wrap">
-    <label 
-    className='player-name-label' 
-    htmlFor={defaultName}
-    >{isRobot ? 'Robot name' : `Enter ${defaultName.toLowerCase()} name`}</label>
+  function handleFocus(){
+    inputRef.current.select()
+  }
 
-    <input 
-    className='player-name-input' 
-    name={defaultName} id={defaultName} 
-    type="text" value={playersInfo} 
-    onChange={(e) => changePlayerInfo(property, e.target.value)}/>
-  </div>
+  let inputContent =
+    <div className="input-wrap">
+      <label
+        className='player-name-label'
+        htmlFor={defaultName}
+      >{isRobot ? 'Robot name' : `Enter ${defaultName.toLowerCase()} name`}</label>
+
+      <input
+        ref={inputRef}
+        onClick={handleFocus}
+        className='player-name-input'
+        name={defaultName} id={defaultName}
+        type="text" value={playersInfo}
+        onChange={(e) => changePlayerInfo(property, e.target.value)} />
+    </div>
 
   let symbolContent =
     <div className="symbol-wrap">

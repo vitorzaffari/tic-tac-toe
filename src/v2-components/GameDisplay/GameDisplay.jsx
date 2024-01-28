@@ -17,6 +17,12 @@ const GameDisplay = ({ playersInfo, backToMainMenu, isRobot = false }) => {
     handleRobotMove()
   }
 
+  const isDraw = gameBoardLogs.length === 10 && gameBoardState.gameState !== 'won'
+  if (isDraw) {
+    const drawLog = { log: `Game drawn. No winners!`, id: Math.random() }
+    setGameBoardLogs(prev => [drawLog, ...prev])
+    setGameBoardState(prev => ({ ...prev, gameState: 'draw' }))
+  }
 
   function handleNewMove(index) {
     if (gameBoardState.board[index]) return;
@@ -35,20 +41,10 @@ const GameDisplay = ({ playersInfo, backToMainMenu, isRobot = false }) => {
 
     const hasWinner = verifyWinCondition(newBoard, activePlayer.symbol)
     if (hasWinner?.winner) {
+      console.log('oi')
       const winLog = { log: `Game finished. ${activePlayer.player} won!`, id: Math.random() }
       setGameBoardLogs(prev => [winLog, ...prev])
       setGameBoardState(prev => ({ ...prev, gameState: 'won', winningSquares: [...hasWinner.squares] }))
-    }
-
-
-
-
-    const isDraw = gameBoardLogs.length === 9
-
-    if (isDraw) {
-      const drawLog = { log: `Game drawn. No winners!`, id: Math.random() }
-      setGameBoardLogs(prev => [drawLog, ...prev])
-      setGameBoardState(prev => ({ ...prev, gameState: 'draw' }))
     }
 
 
@@ -76,8 +72,6 @@ const GameDisplay = ({ playersInfo, backToMainMenu, isRobot = false }) => {
     //2,4,6
     //0,4,8
   }
-
-
 
   function restartGame() {
     setGameBoardState(() => ({
@@ -134,9 +128,9 @@ const GameDisplay = ({ playersInfo, backToMainMenu, isRobot = false }) => {
     }
   }
 
-  function makeRobotRandomMove(){
+  function makeRobotRandomMove() {
     const possibleIndexes = gameBoardState.board.map((item, index) => {
-      if(item === null) return index
+      if (item === null) return index
       else return null
     })
     const indexes = possibleIndexes.filter(item => item !== null)
@@ -165,6 +159,7 @@ const GameDisplay = ({ playersInfo, backToMainMenu, isRobot = false }) => {
     }
     return;
   }
+
 
   return (
     <>

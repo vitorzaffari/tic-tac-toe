@@ -5,7 +5,7 @@ import PVPimage2 from '../../assets/man-vs-woman-2.png'
 import './GameModePVP.css'
 import GameDisplay from '../GameDisplay/GameDisplay'
 
-const GameModePVP = ({backToMainMenu}) => {
+const GameModePVP = ({ backToMainMenu }) => {
   const [playersInfo, setPlayersInfo] = useState(
     {
       player1: 'Player 1',
@@ -24,19 +24,22 @@ const GameModePVP = ({backToMainMenu}) => {
 
 
   return (
-    <div>
+    <section className='pvp-component'>
 
       {!isGameActive &&
         <>
-          <SmallTextBox text={"Player VS Player"} />
+          {/* <SmallTextBox text={"Player VS Player"} /> */}
           <PlayerNames changePlayerInfo={changePlayerInfo} playersInfo={playersInfo} />
-          <img src={PVPimage2} alt="Player VS Player Image" className='pvp-image' />
-          <button className='start-game-btn' onClick={() => setIsGameActive(true)}>Start Game</button>
+
+          <button className='start-game-btn' onClick={() => setIsGameActive(true)}>
+            <img src={PVPimage2} alt="Player VS Player Image" className='pvp-image' />
+            Start Game</button>
         </>
       }
 
-      {isGameActive && <GameDisplay playersInfo={playersInfo} backToMainMenu={backToMainMenu}/>}
-    </div>
+      {isGameActive && <GameDisplay playersInfo={playersInfo} backToMainMenu={backToMainMenu} />}
+      <button className='back-to-menu-btn' onClick={backToMainMenu}>Back to main menu</button>
+    </section>
   )
 }
 

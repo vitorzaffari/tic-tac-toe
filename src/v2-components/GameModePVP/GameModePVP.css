@@ -1,36 +1,48 @@
+.pvp-component {
+    width: 90%;
+    margin: 0 auto;
+    /*....component*/
+
+
+    .back-to-menu-btn {
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        background-color: #55555520;
+        padding: .4rem .4rem;
+        font-size: 1rem;
+        border-radius: 5px;
+        border: none;
+        font-weight: 200;
+        cursor: pointer;
+
+    }
+}
+
 .pvp-image {
-    opacity: .5;
     display: block;
     margin: 0 auto;
+
 }
 
 .start-game-btn {
     /* Typography */
-    color: #FFF;
-    text-align: center;
-    font-family: Outfit;
-    font-size: 26px;
-    font-style: normal;
+    font-size: 22px;
     font-weight: 200;
-    line-height: normal;
+    letter-spacing: .5px;
+    transition: opacity 300ms ease;
 
+    opacity: .5;
     /* Layout */
-    margin: 2rem auto 0;
+    margin: 3rem auto 0;
     display: block;
     cursor: pointer;
-    width: 396px;
-    height: 68px;
-    flex-shrink: 0;
     border: none;
     border-radius: 6px;
-    background: rgba(255, 255, 255, 0.20);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
-    transition: background 200ms ease;
+    background-color: transparent;
+
+    &:hover {
+        opacity: .8;
+    }
 }
 
-.start-game-btn:hover{
-    background: rgba(255, 255, 255, 0.25);
-}
-.start-game-btn:active{
-    background: rgba(255, 255, 255, 0.3);
-}

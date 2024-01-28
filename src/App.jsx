@@ -10,7 +10,6 @@ function App() {
 
   return (
     <main>
-      <h1 className="app-title">LET'S PLAY <br></br> TIC-TAC-TOE</h1>
       <MainGameWindow />
     </main>
   )

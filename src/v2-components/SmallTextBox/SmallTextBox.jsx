@@ -1,9 +1,9 @@
 import './SmallTextBox.css'
 
 
-const SmallTextBox = ({text}) => {
+const SmallTextBox = ({text, fontSize = 16}) => {
   return (
-    <div className='small-text-box-component'>{text}</div>
+    <p className='small-text-box-component' style={{fontSize: fontSize}}>{text}</p>
   )
 }
 

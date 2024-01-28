@@ -7,8 +7,8 @@ const SelectGameMode = ({changeGameMode}) => {
 
 
     return (
-        <div>
-            <SmallTextBox text={'Select one'} />
+        <section className='game-mode-component'>
+            <SmallTextBox text={'Select game mode'} fontSize={18}/>
             <div className="container">
                 <button  className="mode-select-button" onClick={() => changeGameMode('vs-player')}>
                     <img src={PVPimage} alt="Player VS Player" />
@@ -20,7 +20,7 @@ const SelectGameMode = ({changeGameMode}) => {
                     <p className='mode-select-text'>Play against the machine</p>
                 </button>
             </div>
-        </div>
+        </section>
     )
 }
 
