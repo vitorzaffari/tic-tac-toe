@@ -32,17 +32,23 @@
     letter-spacing: .5px;
     transition: opacity 300ms ease;
 
+    /*Style*/
     opacity: .5;
+    border: 1px solid red;
+    border: none;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(180deg, rgba(2, 0, 36, 0) 50%, rgba(108, 30, 180, 0.363) 100%);
+    box-shadow: 5px 5px 5px #55555540;
+
     /* Layout */
     margin: 3rem auto 0;
+    padding: 0 5rem 1rem;
     display: block;
     cursor: pointer;
-    border: none;
     border-radius: 6px;
-    background-color: transparent;
+    /* background-color: transparent; */
 
     &:hover {
         opacity: .8;
     }
 }
-

@@ -41,7 +41,6 @@ const GameDisplay = ({ playersInfo, backToMainMenu, isRobot = false }) => {
 
     const hasWinner = verifyWinCondition(newBoard, activePlayer.symbol)
     if (hasWinner?.winner) {
-      console.log('oi')
       const winLog = { log: `Game finished. ${activePlayer.player} won!`, id: Math.random() }
       setGameBoardLogs(prev => [winLog, ...prev])
       setGameBoardState(prev => ({ ...prev, gameState: 'won', winningSquares: [...hasWinner.squares] }))
@@ -85,16 +84,16 @@ const GameDisplay = ({ playersInfo, backToMainMenu, isRobot = false }) => {
   function handleRobotMove() {
     const robotWinningSquareIndex = verifyPossibleWin(gameBoardState.board, 'O')
     if (robotWinningSquareIndex) {
-      console.log('Robot win move')
+      // console.log('Robot win move')
       return makeRobotMove(robotWinningSquareIndex)
     } else {
       const playerWinningSquareIndex = verifyPossibleWin(gameBoardState.board, 'X')
       if (playerWinningSquareIndex) {
-        console.log('Player block move')
+        // console.log('Player block move')
         return makeRobotMove(playerWinningSquareIndex)
       } else {
         const index = makeRobotRandomMove()
-        console.log("Robot random move")
+        // console.log("Robot random move")
         return makeRobotMove(index)
       }
     }

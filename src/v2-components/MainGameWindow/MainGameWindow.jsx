@@ -7,7 +7,7 @@ import GameModePVR from '../GameModePVR/GameModePVR.jsx';
 const MainGameWindow = () => {
 
     const [gameMode, setGameMode] = useState(null);
-    function backToMainMenu(){
+    function backToMainMenu() {
         setGameMode(null);
     }
 
@@ -15,8 +15,8 @@ const MainGameWindow = () => {
         <div className='main-game-window-component'>
 
             {gameMode == null && <GameModeNull changeGameMode={setGameMode} />}
-            {gameMode == 'vs-player' && <GameModePVP backToMainMenu={backToMainMenu}/>}
-            {gameMode == 'vs-robot' && <GameModePVR backToMainMenu={backToMainMenu}/>}
+            {gameMode == 'vs-player' && <GameModePVP backToMainMenu={backToMainMenu} />}
+            {gameMode == 'vs-robot' && <GameModePVR backToMainMenu={backToMainMenu} />}
 
 
         </div>

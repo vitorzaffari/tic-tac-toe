@@ -7,6 +7,7 @@
     justify-content: center;
     border: none;
     cursor: pointer;
+    user-select: none;
 }
 
 .square:hover {
