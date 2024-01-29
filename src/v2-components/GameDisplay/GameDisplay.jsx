@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import GameBoard from './GameBoard/GameBoard'
+import GameBoard from '../GameBoard/GameBoard'
 import './GameDisplay.css'
-import GameLogDisplay from './GameLogDisplay/GameLogDisplay'
-import PlayersInfoDisplay from './PlayersInfoDisplay/PlayersInfoDisplay'
+import GameLogDisplay from '../GameLogDisplay/GameLogDisplay'
+import PlayersInfoDisplay from '../PlayersInfoDisplay/PlayersInfoDisplay'
 import { WINNING_COMBINATIONS } from '../../winning-combinations'
 
 const GameDisplay = ({ playersInfo, backToMainMenu, isRobot = false }) => {
@@ -19,7 +19,7 @@ const GameDisplay = ({ playersInfo, backToMainMenu, isRobot = false }) => {
 
   const isDraw = gameBoardLogs.length === 10 && gameBoardState.gameState !== 'won'
   if (isDraw) {
-    const drawLog = { log: `Game drawn. No winners!`, id: Math.random() }
+    const drawLog = { log: `Game drawn. No winner!`, id: Math.random() }
     setGameBoardLogs(prev => [drawLog, ...prev])
     setGameBoardState(prev => ({ ...prev, gameState: 'draw' }))
   }
@@ -83,21 +83,17 @@ const GameDisplay = ({ playersInfo, backToMainMenu, isRobot = false }) => {
 
   function handleRobotMove() {
 
-
     const robotWinningSquareIndex = verifyPossibleWin(gameBoardState.board, 'O')
     if (robotWinningSquareIndex) {
-      // console.log('Robot win move')
       return makeRobotMove(Number(robotWinningSquareIndex))
 
     } else {
       const playerWinningSquareIndex = verifyPossibleWin(gameBoardState.board, 'X')
       if (playerWinningSquareIndex) {
-        // console.log('Player block move')
         return makeRobotMove(Number(playerWinningSquareIndex))
 
       } else {
         const index = makeRobotRandomMove()
-        // console.log("Robot random move")
         return makeRobotMove(index)
       }
     }
@@ -138,23 +134,22 @@ const GameDisplay = ({ playersInfo, backToMainMenu, isRobot = false }) => {
   }
 
   function verifyPossibleWin(boardSnapShot, symbol) {
-    // console.log("\n\n")
 
     for (let combination of WINNING_COMBINATIONS) {
       const firstSquare = combination[0]
       const secondSquare = combination[1]
       const thirdSquare = combination[2]
-      // if (symbol === 'O') {
-      //   console.log("\nCombination: \n", boardSnapShot[firstSquare], boardSnapShot[secondSquare], boardSnapShot[thirdSquare])
-      // }
+      
       if (boardSnapShot[firstSquare] === symbol &&
         boardSnapShot[secondSquare] === symbol &&
         boardSnapShot[thirdSquare] === null) {
         return thirdSquare.toString();
+
       } else if (boardSnapShot[secondSquare] === symbol &&
         boardSnapShot[thirdSquare] === symbol &&
         boardSnapShot[firstSquare] === null) {
         return firstSquare.toString();
+
       } else if (boardSnapShot[thirdSquare] === symbol &&
         boardSnapShot[firstSquare] === symbol &&
         boardSnapShot[secondSquare] === null) {
@@ -168,7 +163,9 @@ const GameDisplay = ({ playersInfo, backToMainMenu, isRobot = false }) => {
   return (
     <>
       <PlayersInfoDisplay playersInfo={playersInfo} activePlayer={activePlayer} gameState={gameBoardState.gameState} restartGame={restartGame} backToMainMenu={backToMainMenu} />
-      <GameBoard gameBoardState={gameBoardState.board} handleNewMove={handleNewMove} winningSquares={gameBoardState.winningSquares} />
+
+      <GameBoard gameBoardState={gameBoardState} handleNewMove={handleNewMove}/>
+
       <GameLogDisplay gameBoardLogs={gameBoardLogs} />
     </>
   )

@@ -1,10 +1,12 @@
 .main-game-window-component {
     /*Layout*/
     margin: 0 auto;
-    width: 900px;
+    max-width: 900px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 4rem;
+    padding: 2rem 0;
+    position: relative;
 }

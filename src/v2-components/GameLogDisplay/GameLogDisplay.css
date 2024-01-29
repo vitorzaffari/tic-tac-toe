@@ -1,5 +1,5 @@
 .game-log-display-component {
-    width: 549px;
+    max-width: 549px;
     height: 173px;
     flex-shrink: 0;
     display: flex;

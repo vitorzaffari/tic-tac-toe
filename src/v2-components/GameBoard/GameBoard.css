@@ -1,12 +1,14 @@
 .game-board-component{
+    width: fit-content;
     display: flex;
     flex-direction: column;
     gap: .5rem;
-    margin: 4rem;
+    margin: 4rem auto;
 
     & .row{
         gap: .5rem;
         margin: 0 auto;
         display: flex;
     }
+
 }
