@@ -82,26 +82,26 @@ const GameDisplay = ({ playersInfo, backToMainMenu, isRobot = false }) => {
   }
 
   function handleRobotMove() {
+
+
     const robotWinningSquareIndex = verifyPossibleWin(gameBoardState.board, 'O')
     if (robotWinningSquareIndex) {
       // console.log('Robot win move')
-      return makeRobotMove(robotWinningSquareIndex)
+      return makeRobotMove(Number(robotWinningSquareIndex))
+
     } else {
       const playerWinningSquareIndex = verifyPossibleWin(gameBoardState.board, 'X')
       if (playerWinningSquareIndex) {
         // console.log('Player block move')
-        return makeRobotMove(playerWinningSquareIndex)
+        return makeRobotMove(Number(playerWinningSquareIndex))
+
       } else {
         const index = makeRobotRandomMove()
         // console.log("Robot random move")
         return makeRobotMove(index)
       }
     }
-    //check for possible robot win
-    //check for possible player win
-    //else make random move - update the board
-    //add new log (changing current player back to player)
-    //check for win or draw
+
   }
 
   function makeRobotMove(index) {
@@ -138,22 +138,27 @@ const GameDisplay = ({ playersInfo, backToMainMenu, isRobot = false }) => {
   }
 
   function verifyPossibleWin(boardSnapShot, symbol) {
+    // console.log("\n\n")
+
     for (let combination of WINNING_COMBINATIONS) {
       const firstSquare = combination[0]
       const secondSquare = combination[1]
       const thirdSquare = combination[2]
+      // if (symbol === 'O') {
+      //   console.log("\nCombination: \n", boardSnapShot[firstSquare], boardSnapShot[secondSquare], boardSnapShot[thirdSquare])
+      // }
       if (boardSnapShot[firstSquare] === symbol &&
-        boardSnapShot[firstSquare] === boardSnapShot[secondSquare] &&
+        boardSnapShot[secondSquare] === symbol &&
         boardSnapShot[thirdSquare] === null) {
-        return thirdSquare;
+        return thirdSquare.toString();
       } else if (boardSnapShot[secondSquare] === symbol &&
-        boardSnapShot[secondSquare] === boardSnapShot[thirdSquare] &&
+        boardSnapShot[thirdSquare] === symbol &&
         boardSnapShot[firstSquare] === null) {
-        return firstSquare;
+        return firstSquare.toString();
       } else if (boardSnapShot[thirdSquare] === symbol &&
-        boardSnapShot[thirdSquare] === boardSnapShot[firstSquare] &&
+        boardSnapShot[firstSquare] === symbol &&
         boardSnapShot[secondSquare] === null) {
-        return secondSquare;
+        return secondSquare.toString();
       }
     }
     return;
