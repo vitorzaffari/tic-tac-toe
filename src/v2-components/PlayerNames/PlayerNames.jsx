@@ -1,4 +1,4 @@
-import PlayerNameInput from '../../PlayerNameInput/PlayerNameInput'
+import PlayerNameInput from '../PlayerNameInput/PlayerNameInput'
 import './PlayerNames.css'
 
 const PlayerNames = ({changePlayerInfo, playersInfo, isRobot=false}) => {

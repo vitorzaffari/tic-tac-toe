@@ -18,7 +18,6 @@ const MainGameWindow = () => {
             {gameMode == 'vs-player' && <GameModePVP backToMainMenu={backToMainMenu} />}
             {gameMode == 'vs-robot' && <GameModePVR backToMainMenu={backToMainMenu} />}
 
-
         </div>
     )
 }

@@ -26,7 +26,6 @@
 
 .wiki-link{
     text-decoration: none;
-    background-color: #61616125;
-    padding: .1rem .6rem .2rem;
-    border-radius: 8px;
+    border-bottom: 1px solid white;
+    padding: .1rem .2rem .1rem;
 }

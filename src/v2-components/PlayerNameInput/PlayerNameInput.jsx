@@ -5,8 +5,15 @@ const PlayerNameInput = ({ order, defaultName, defaultSymbol, property, changePl
 
   let inputRef = useRef(null)
 
-  function handleFocus(){
+  function handleFocus() {
     inputRef.current.select()
+  }
+
+  function handleChangeInput(e){
+    if(e.target.value.length > 10){
+      return;
+    }
+    changePlayerInfo(property, e.target.value)
   }
 
   let inputContent =
@@ -22,7 +29,7 @@ const PlayerNameInput = ({ order, defaultName, defaultSymbol, property, changePl
         className='player-name-input'
         name={defaultName} id={defaultName}
         type="text" value={playersInfo}
-        onChange={(e) => changePlayerInfo(property, e.target.value)} />
+        onChange={(e) => handleChangeInput(e)} />
     </div>
 
   let symbolContent =

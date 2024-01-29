@@ -1,6 +1,6 @@
 import './GameLogDisplay.css'
 
-const GameLogDisplay = ({gameBoardLogs}) => {
+const GameLogDisplay = ({ gameBoardLogs }) => {
   return (
     <div className='game-log-display-component'>
       {gameBoardLogs.map(item => (

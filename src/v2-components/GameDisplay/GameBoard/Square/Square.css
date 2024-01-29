@@ -20,6 +20,8 @@ span {
 
 .winning-square {
     background: rgba(69, 255, 23, 0.25);
+
     &:hover {
-        background: rgba(69, 255, 23, 0.25);    }
+        background: rgba(69, 255, 23, 0.25);
+    }
 }

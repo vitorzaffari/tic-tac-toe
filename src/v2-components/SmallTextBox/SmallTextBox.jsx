@@ -8,3 +8,4 @@ const SmallTextBox = ({text, fontSize = 16}) => {
 }
 
 export default SmallTextBox
+

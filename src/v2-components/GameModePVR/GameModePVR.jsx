@@ -3,7 +3,7 @@ import PvRobotIMG from '../../assets/man-vs-robot2.png'
 import SmallTextBox from '../SmallTextBox/SmallTextBox'
 import GameDisplay from '../GameDisplay/GameDisplay'
 import './GameModePVR.css'
-import PlayerNames from '../GameModePVP/PlayerNames/PlayerNames'
+import PlayerNames from '../PlayerNames/PlayerNames'
 const GameModePVR = ({ backToMainMenu }) => {
     const [playersInfo, setPlayersInfo] = useState(
         {
@@ -29,9 +29,9 @@ const GameModePVR = ({ backToMainMenu }) => {
                 <>
                     <SmallTextBox text={"Player VS Robot"} />
                     <PlayerNames changePlayerInfo={changePlayerInfo} playersInfo={playersInfo} isRobot={true} />
-
+                    <img src={PvRobotIMG} alt="Player VS Robot Image" className='pvr-image' />
                     <button className='start-game-btn' onClick={() => setIsGameActive(true)}>
-                        <img src={PvRobotIMG} alt="Player VS Robot Image" className='pvr-image' />
+
                         Start Game
                     </button>
                 </>

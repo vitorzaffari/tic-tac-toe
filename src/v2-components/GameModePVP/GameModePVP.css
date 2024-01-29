@@ -22,6 +22,7 @@
 .pvp-image {
     display: block;
     margin: 0 auto;
+    opacity: .5;
 
 }
 
@@ -33,11 +34,11 @@
     transition: opacity 300ms ease;
 
     /*Style*/
-    opacity: .5;
+    opacity: .8;
     border: 1px solid red;
     border: none;
     background: rgb(2, 0, 36);
-    background: linear-gradient(180deg, rgba(2, 0, 36, 0) 50%, rgba(108, 30, 180, 0.363) 100%);
+    background: linear-gradient(180deg, rgba(2, 0, 36, 0) 50%, rgba(108, 30, 180, 0.082) 100%);
     box-shadow: 5px 5px 5px #55555540;
 
     /* Layout */
@@ -49,6 +50,6 @@
     /* background-color: transparent; */
 
     &:hover {
-        opacity: .8;
+        opacity: 1;
     }
 }

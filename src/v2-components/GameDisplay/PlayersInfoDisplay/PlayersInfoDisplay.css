@@ -2,16 +2,21 @@
     display: flex;
     justify-content: center;
     gap: 2rem;
+    min-height: 6rem;
+
 
     .player-info-div {
         display: flex;
         flex-direction: column;
         padding: 1rem;
-        & .player-p{
+        height: fit-content;
+
+        & .player-p {
             margin-left: .8rem;
             font-size: 1.2rem;
             font-weight: 300;
         }
+
         & .wrap {
             width: fit-content;
             margin: 5px auto 0;
@@ -23,7 +28,8 @@
                 padding: .2rem .8rem;
                 font-weight: 200;
             }
-            & .player-symbol{
+
+            & .player-symbol {
                 background-color: #FFFFFF30;
             }
         }
@@ -39,6 +45,8 @@
 
 
 .winner-container {
+    min-height: 6rem;
+
     .winner-message {
         font-size: 1.8rem;
         text-align: center;
