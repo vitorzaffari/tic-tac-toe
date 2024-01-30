@@ -1,6 +1,7 @@
 .player-info-display-component {
     display: flex;
-    justify-content: center;
+    justify-content:center;
+    align-items: end;
     gap: 2rem;
     min-height: 6rem;
 

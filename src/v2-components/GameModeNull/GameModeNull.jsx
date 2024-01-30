@@ -7,10 +7,8 @@ import SmallTextBox from '../SmallTextBox/SmallTextBox';
 
 const GameModeNull = ({ changeGameMode }) => {
     return (
-        <>
             <SelectGameMode>
                 <IntroText />
-                
                 <section className='game-mode-component'>
                     <SmallTextBox text={'Select game mode'} fontSize={18} />
                     <div className="container">
@@ -24,10 +22,10 @@ const GameModeNull = ({ changeGameMode }) => {
                             <img src={PVSRobotImage} alt="Player VS Machine" />
                             <p className='mode-select-text'>Play against the machine</p>
                         </button>
+
                     </div>
                 </section>
             </SelectGameMode>
-        </>
     )
 }
 
