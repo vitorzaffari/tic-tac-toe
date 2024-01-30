@@ -1,0 +1,55 @@
+.game-mode-selected {
+    width: 90%;
+    margin: 0 auto;
+
+    .mode-image {
+        display: block;
+        margin: 0 auto;
+        opacity: .5;
+
+    }
+
+
+    .start-game-btn {
+        /* Typography */
+        font-size: 22px;
+        font-weight: 200;
+        letter-spacing: .5px;
+        transition: opacity 300ms ease;
+
+        /*Style*/
+        opacity: .8;
+        border: 1px solid red;
+        border: none;
+        background: rgb(2, 0, 36);
+        background: linear-gradient(180deg, rgba(2, 0, 36, 0) 50%, rgba(108, 30, 180, 0.082) 100%);
+        box-shadow: 5px 5px 5px #55555540;
+
+        /* Layout */
+        margin: 3rem auto 0;
+        padding: 0 5rem 1rem;
+        display: block;
+        cursor: pointer;
+        border-radius: 6px;
+        /* background-color: transparent; */
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+
+    .back-to-menu-btn {
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        background-color: #55555520;
+        padding: .4rem .4rem;
+        font-size: 1rem;
+        border-radius: 5px;
+        border: none;
+        font-weight: 200;
+        cursor: pointer;
+
+    }
+}

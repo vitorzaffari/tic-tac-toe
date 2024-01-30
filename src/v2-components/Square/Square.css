@@ -29,3 +29,7 @@ span {
 .fade{
     opacity: .6;
 }
+
+.ended{
+    cursor: default;
+}

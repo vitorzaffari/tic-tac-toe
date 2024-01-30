@@ -3,6 +3,7 @@ import { useState } from 'react'
 import GameModeNull from '../GameModeNull/GameModeNull.jsx'
 import GameModePVP from '../GameModePVP/GameModePVP.jsx';
 import GameModePVR from '../GameModePVR/GameModePVR.jsx';
+import GameModeSelected from '../GameModeSelected/GameModeSelected.jsx';
 
 const MainGameWindow = () => {
 
@@ -13,11 +14,9 @@ const MainGameWindow = () => {
 
     return (
         <div className='main-game-window-component'>
-
             {gameMode == null && <GameModeNull changeGameMode={setGameMode} />}
-            {gameMode == 'vs-player' && <GameModePVP backToMainMenu={backToMainMenu} />}
-            {gameMode == 'vs-robot' && <GameModePVR backToMainMenu={backToMainMenu} />}
-
+            {gameMode == 'vs-player' && <GameModeSelected backToMainMenu={backToMainMenu} />}
+            {gameMode == 'vs-robot' && <GameModeSelected backToMainMenu={backToMainMenu} isAgainstRobot={true} />}
         </div>
     )
 }
