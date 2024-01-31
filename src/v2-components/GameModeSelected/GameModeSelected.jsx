@@ -3,7 +3,7 @@ import { useState } from 'react'
 import PvRobotIMG from '../../assets/man-vs-robot2.png'
 import PVPimage2 from '../../assets/man-vs-woman-2.png'
 import GameDisplay from '../GameDisplay/GameDisplay'
-import PlayerNames from '../PlayerNames/PlayerNames'
+import PlayerNames from '../PlayerNamesSelection/PlayerNamesSelection'
 
 const GameModeSelected = ({ backToMainMenu, isAgainstRobot = false }) => {
 
