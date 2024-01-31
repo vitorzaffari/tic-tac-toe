@@ -162,7 +162,7 @@ const GameDisplay = ({ playersInfo, backToMainMenu, isRobot = false }) => {
 
   return (
     <>
-      <PlayersInfoDisplay playersInfo={playersInfo} activePlayer={activePlayer} gameState={gameBoardState.gameState} restartGame={restartGame} backToMainMenu={backToMainMenu} />
+      <PlayersInfoDisplay playersInfo={playersInfo} activePlayer={activePlayer} gameState={gameBoardState.gameState} restartGame={restartGame} backToMainMenu={backToMainMenu} isRobot={isRobot}/>
 
       <GameBoard gameBoardState={gameBoardState} handleNewMove={handleNewMove}/>
 

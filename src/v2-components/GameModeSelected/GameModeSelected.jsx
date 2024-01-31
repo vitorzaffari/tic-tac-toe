@@ -23,7 +23,6 @@ const GameModeSelected = ({ backToMainMenu, isAgainstRobot = false }) => {
     }
 
 
-    //TODO change PlayerNames component to PlayerNamesInputs
     if (!isGameActive) {
 
         const image = isAgainstRobot ? PvRobotIMG : PVPimage2;
