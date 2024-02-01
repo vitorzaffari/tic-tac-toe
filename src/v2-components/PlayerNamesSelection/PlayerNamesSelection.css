@@ -1,10 +1,12 @@
-.player-names-component{
+.player-names-component {
     display: flex;
     gap: 1rem;
     width: fit-content;
-    margin-top: 50px;
+    margin: 50px auto 0;
 
 }
+
+
 
 .input-wrap {
     /* Layout */
@@ -34,8 +36,9 @@
         line-height: normal;
         text-align: center;
 
-        border: none;
+        max-width: 250px;
         outline: none;
+        border: 1px solid rgba(255, 255, 255, 0.178);
         padding: .8rem;
         border-radius: 7px;
         background: rgba(255, 255, 255, 0.10);
@@ -68,10 +71,32 @@
         line-height: normal;
         text-align: center;
 
+        width: 60px;
         border: none;
         outline: none;
         padding: .8rem;
         border-radius: 7px;
         background: rgba(255, 255, 255, 0.10);
+    }
+}
+
+
+
+
+@media (max-width: 750px) {
+    .player-names-component {
+        flex-wrap: wrap;
+    }
+
+    .symbol-wrap {
+        display: none;
+    }
+
+    .input-wrap {
+        width: 100%;
+    }
+
+    input {
+        margin: 0 auto;
     }
 }

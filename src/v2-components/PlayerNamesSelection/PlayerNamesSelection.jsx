@@ -27,9 +27,9 @@ const PlayerNames = ({ changePlayerInfo, playersInfo, isRobot = false }) => {
         <label className='player-name-label' htmlFor='player1'>Enter player 1 name</label>
 
         <input
+          className='player-name-input'
           ref={p1Ref}
           onClick={() => handleFocus(p1Ref)}
-          className='player-name-input'
           name="player1" id="player1"
           type="text" value={playersInfo.player1}
           onChange={(e) => handleChangeInput(e)} />
