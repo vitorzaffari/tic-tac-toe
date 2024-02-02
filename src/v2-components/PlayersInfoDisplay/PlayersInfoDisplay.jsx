@@ -7,11 +7,11 @@ const PlayersInfoDisplay = ({ playersInfo, activePlayer, gameState, restartGame,
     if (!gameState) {
         return (
             <div className='player-info-display-component'>
-                <div className={`player-info-div ${activePlayer.symbol === 'X' && 'active'}`}>
+                <div className={`player-info-div ${activePlayer.symbol === 'X' ? 'active' : ''}`}>
                     <p> {playersInfo.player1}</p>
                     <p className='player-symbol'>{playersInfo.player1Symbol}</p>
                 </div>
-                <div className={`player-info-div ${activePlayer.symbol === 'O' && 'active'}`}>
+                <div className={`player-info-div ${activePlayer.symbol === 'O' ? 'active' : ''}`}>
                     <p>{playersInfo.player2}</p>
                     <p className='player-symbol'>{playersInfo.player2Symbol}</p>
                 </div>

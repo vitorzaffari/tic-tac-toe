@@ -30,7 +30,6 @@ const GameModeSelected = ({ backToMainMenu, isAgainstRobot = false }) => {
 
         return (
             <section className='game-mode-selected'>
-
                 <PlayerNames changePlayerInfo={changePlayerInfo} playersInfo={playersInfo} isRobot={isAgainstRobot} />
                 <img src={image} alt={imageAlt} className='mode-image' />
                 <button className='start-game-btn' onClick={() => setIsGameActive(true)}>

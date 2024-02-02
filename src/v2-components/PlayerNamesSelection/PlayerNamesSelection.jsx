@@ -24,8 +24,7 @@ const PlayerNames = ({ changePlayerInfo, playersInfo, isRobot = false }) => {
 
 
       <div className="input-wrap">
-        <label className='player-name-label' htmlFor='player1'>Enter player 1 name</label>
-
+        <label className='player-name-label' htmlFor='player1'>Enter player name</label>
         <input
           className='player-name-input'
           ref={p1Ref}
@@ -34,20 +33,22 @@ const PlayerNames = ({ changePlayerInfo, playersInfo, isRobot = false }) => {
           type="text" value={playersInfo.player1}
           onChange={(e) => handleChangeInput(e)} />
       </div>
+
+
       <div className="symbol-wrap">
         <p className='player-symbol-label'>Symbol</p>
         <p className='player-symbol-p'>X</p>
       </div>
 
 
-
       <div className="symbol-wrap">
         <p className='player-symbol-label'>Symbol</p>
         <p className='player-symbol-p'>O</p>
       </div>
-      <div className="input-wrap">
-        <label className='player-name-label' htmlFor='player2' >{isRobot ? 'Robot name' : `Enter player 2 name`}</label>
 
+
+      <div className="input-wrap">
+        <label className='player-name-label' htmlFor='player2' >{isRobot ? 'Robot name' : `Enter player name`}</label>
         <input
           ref={p2Ref}
           onClick={() => handleFocus(p2Ref)}
@@ -56,6 +57,7 @@ const PlayerNames = ({ changePlayerInfo, playersInfo, isRobot = false }) => {
           type="text" value={playersInfo.player2}
           onChange={(e) => handleChangeInput(e)} />
       </div>
+
 
     </div>
   )
