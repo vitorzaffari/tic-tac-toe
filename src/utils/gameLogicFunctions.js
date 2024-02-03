@@ -1,4 +1,4 @@
-import { WINNING_COMBINATIONS } from "../winning-combinations";
+import { WINNING_COMBINATIONS } from "./winning-combinations";
 
 export function verifyWinCondition(boardSnapShot, symbol) {
   for (let combination of WINNING_COMBINATIONS) {
