@@ -1,29 +1,29 @@
-
-
- /* width */
- ::-webkit-scrollbar {
-    width: 5px;
-    border-radius: 5px;
-}
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #cf232300;
-    border-radius: 5px;
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #d1cce9;
-    border-radius: 5px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: rgb(255, 255, 255);
-  } 
-
-  :root, .game-log-display-component{
-    scrollbar-color:#d1cce9 rgba(46, 54, 69, 0);
+@-moz-document url-prefix() {
+  :root, .game-log-display-component {
+    scrollbar-color: #d1cce9 rgba(46, 54, 69, 0);
     scrollbar-width: thin;
   }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #cf232300;
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #d1cce9;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(255, 255, 255);
+}

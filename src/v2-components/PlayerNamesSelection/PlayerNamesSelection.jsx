@@ -15,6 +15,7 @@ const PlayerNames = ({ changePlayerInfo, playersInfo, isRobot = false }) => {
     if (e.target.value.length > 10) {
       return;
     }
+    
 
     changePlayerInfo(e.target.name, e.target.value)
   }

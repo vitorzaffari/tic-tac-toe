@@ -13,11 +13,11 @@ const GameModeNull = ({ changeGameMode }) => {
                 <SmallTextBox text={'Select game mode'} fontSize={18} />
                 <div className="container">
                     <button className="mode-select-button" onClick={() => changeGameMode('vs-player')}>
-                        <img src={PVPimage} alt="Player VS Player" />
+                        <img src={PVPimage} alt="Player VS Player" width={350} height={330}/>
                         <p className='mode-select-text'>Play against another player</p>
                     </button>
                     <button className="mode-select-button" onClick={() => changeGameMode('vs-robot')}>
-                        <img src={PVSRobotImage} alt="Player VS Machine" />
+                        <img src={PVSRobotImage} alt="Player VS Machine" width={350} height={330}/>
                         <p className='mode-select-text'>Play against the machine</p>
                     </button>
                 </div>

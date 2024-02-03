@@ -16,7 +16,8 @@
         /*Layout*/
         display: flex;
         flex-direction: column;
-
+        width: 350px;
+        height: 400px;
         /*Style*/
         cursor: pointer;
         background-color: transparent;
