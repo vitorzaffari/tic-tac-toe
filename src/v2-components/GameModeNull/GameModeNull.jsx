@@ -1,5 +1,4 @@
 import './GameModeNull.css'
-import SelectGameMode from '../SelectGameMode/SelectGameMode'
 import IntroText from '../IntroText/IntroText'
 import PVPimage from '../../assets/man-vs-woman.png';
 import PVSRobotImage from '../../assets/man-vs-robot.png';
@@ -7,9 +6,9 @@ import SmallTextBox from '../SmallTextBox/SmallTextBox';
 
 const GameModeNull = ({ changeGameMode }) => {
     return (
-        <SelectGameMode>
+        <section>
             <IntroText />
-            <section className='game-mode-component'>
+            <div className='game-mode-component'>
                 <SmallTextBox text={'Select game mode'} fontSize={18} />
                 <div className="container">
                     <button className="mode-select-button" onClick={() => changeGameMode('vs-player')}>
@@ -21,8 +20,8 @@ const GameModeNull = ({ changeGameMode }) => {
                         <p className='mode-select-text'>Play against the machine</p>
                     </button>
                 </div>
-            </section>
-        </SelectGameMode>
+            </div>
+        </section>
     )
 }
 
