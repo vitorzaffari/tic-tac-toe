@@ -5,10 +5,11 @@ import GameLogDisplay from '../GameLogDisplay/GameLogDisplay'
 import PlayersInfoDisplay from '../PlayersInfoDisplay/PlayersInfoDisplay'
 import {
   getActivePlayer,
+  getLogMessage,
   getRandomFreeIndex,
   verifyPossibleWin,
   verifyWinCondition
-} from '../../utils/gameLogicFunctions'
+} from '../../utils/game-logic'
 
 const initialGameBoardState = { board: Array(9).fill(null), gameState: '', winningSquares: [] }
 const initialGameLogsState = [{ log: 'Game started!', id: Math.random() }]
@@ -39,7 +40,8 @@ const GameDisplay = ({ playersInfo, backToMainMenu, isRobot = false }) => {
     newBoard[index] = activePlayer.symbol
     setGameBoardState((prev) => ({ ...prev, board: newBoard }))
 
-    const newLog = { log: `${activePlayer.player} (${activePlayer.symbol}) made a move!`, id: Math.random() };
+    const message = getLogMessage(index)
+    const newLog = { log: `${activePlayer.player} (${activePlayer.symbol}) chose ${message}!`, id: Math.random() };
     setGameBoardLogs((prev) => [newLog, ...prev])
 
     const hasWinner = verifyWinCondition(newBoard, activePlayer.symbol)
@@ -76,7 +78,8 @@ const GameDisplay = ({ playersInfo, backToMainMenu, isRobot = false }) => {
     newBoard[index] = 'O'
     setGameBoardState((prev) => ({ ...prev, board: newBoard }))
 
-    const newLog = { log: `Robot (O) made a move!`, id: Math.random() };
+    const message = getLogMessage(index)
+    const newLog = { log: `Robot (O) chose ${message}!`, id: Math.random() };
     setGameBoardLogs((prev) => [newLog, ...prev])
 
     const hasWinner = verifyWinCondition(newBoard, 'O')
@@ -95,13 +98,13 @@ const GameDisplay = ({ playersInfo, backToMainMenu, isRobot = false }) => {
   }
 
   return (
-    <>
+    <section className='game-display'>
       <PlayersInfoDisplay playersInfo={playersInfo} activePlayer={activePlayer} gameState={gameBoardState.gameState} restartGame={restartGame} backToMainMenu={backToMainMenu} isRobot={isRobot} />
 
       <GameBoard gameBoardState={gameBoardState} handleNewMove={handleNewMove} />
 
       <GameLogDisplay gameBoardLogs={gameBoardLogs} />
-    </>
+    </section>
   )
 }
 

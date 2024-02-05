@@ -8,7 +8,6 @@ function App() {
   
 
 
-  //TODO Add logs with more information to logs display
   //TODO Fix layout for cellphones (almost there)
   //TODO Add player and robot images on game display
 

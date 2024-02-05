@@ -63,3 +63,26 @@ export function verifyPossibleWin(boardSnapShot, symbol) {
   }
   return;
 }
+
+export function getLogMessage(index) {
+  switch (index) {
+    case 0:
+      return "first row, first column";
+    case 1:
+      return "first row, second column";
+    case 2:
+      return "first row, third column";
+    case 3:
+      return "second row, first column";
+    case 4:
+      return "second row, second column";
+    case 5:
+      return "second row, third column";
+    case 6:
+      return "third row, first column";
+    case 7:
+      return "third row, second column";
+    case 8:
+      return "third row, third column";
+  }
+}
