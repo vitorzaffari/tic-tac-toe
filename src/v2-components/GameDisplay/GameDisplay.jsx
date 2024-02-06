@@ -1,4 +1,3 @@
-import './GameDisplay.css'
 import { useState } from 'react'
 import GameBoard from '../GameBoard/GameBoard'
 import GameLogDisplay from '../GameLogDisplay/GameLogDisplay'

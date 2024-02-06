@@ -9,8 +9,11 @@
 
     }
 
-    .img-container{
-        height: 450px;
+    .img-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
     }
 
     .start-game-btn {
@@ -61,12 +64,26 @@
         opacity: .7;
         transition: opacity 200ms ease;
 
-        &:hover{
+        &:hover {
             opacity: 1;
         }
     }
 
     p {
         font-weight: 100;
+    }
+}
+
+
+
+
+@media (max-width: 480px) {
+    .img-container {
+        height: 300px;
+
+        img {
+            width: 290px;
+            height: 290px;
+        }
     }
 }

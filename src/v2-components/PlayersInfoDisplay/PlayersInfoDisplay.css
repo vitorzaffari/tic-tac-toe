@@ -68,3 +68,13 @@
 
     }
 }
+
+
+
+@media (max-width: 430px) {
+    .player-info-display-component {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+}

@@ -8,7 +8,7 @@ const Square = ({ value, handleNewMove, isWinningSquare, hasGameEnded}) => {
 
   return (
     <button className={`square ${squareClass}`} onClick={handleNewMove} disabled={hasGameEnded}>
-      <span>{value}</span>
+      <span className='square-value'>{value}</span>
     </button>
   )
 }

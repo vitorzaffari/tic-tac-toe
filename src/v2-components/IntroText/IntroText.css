@@ -29,3 +29,11 @@
     border-bottom: 1px solid white;
     padding: .1rem .2rem .1rem;
 }
+
+
+
+@media (max-width: 430px) {
+    .tictactoe-description p {
+        font-size: 1rem;
+    }
+}

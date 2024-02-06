@@ -8,7 +8,6 @@ function App() {
   
 
 
-  //TODO Fix layout for cellphones (almost there)
   //TODO Add player and robot images on game display
 
   return (
