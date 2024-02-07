@@ -3,7 +3,7 @@ import { useState } from 'react'
 import PvRobotIMG from '../../assets/man-vs-robot2.png'
 import PVPimage2 from '../../assets/man-vs-woman-2.png'
 import GameDisplay from '../GameDisplay/GameDisplay'
-import PlayerNames from '../PlayerNamesSelection/PlayerNamesSelection'
+import PlayerNamesSelection from '../PlayerNamesSelection/PlayerNamesSelection'
 
 const GameModeSelected = ({ backToMainMenu, isAgainstRobot = false }) => {
 
@@ -40,7 +40,7 @@ const GameModeSelected = ({ backToMainMenu, isAgainstRobot = false }) => {
 
         return (
             <section className='game-mode-selected'>
-                <PlayerNames changePlayerInfo={changePlayerInfo} playersInfo={playersInfo} isRobot={isAgainstRobot} />
+                <PlayerNamesSelection changePlayerInfo={changePlayerInfo} playersInfo={playersInfo} isRobot={isAgainstRobot} />
                 <div className="img-container">
                     <img src={image} alt={imageAlt} className='mode-image' width={450} height={425} />
                 </div>

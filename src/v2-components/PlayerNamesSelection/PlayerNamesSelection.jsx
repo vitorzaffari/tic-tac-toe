@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 import './PlayerNamesSelection.css'
 
-const PlayerNames = ({ changePlayerInfo, playersInfo, isRobot = false }) => {
+const PlayerNamesSelection = ({ changePlayerInfo, playersInfo, isRobot = false }) => {
 
 
   let p1Ref = useRef(null)
@@ -63,4 +63,4 @@ const PlayerNames = ({ changePlayerInfo, playersInfo, isRobot = false }) => {
   )
 }
 
-export default PlayerNames
+export default PlayerNamesSelection

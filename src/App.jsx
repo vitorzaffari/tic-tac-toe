@@ -5,10 +5,6 @@ import MainGameWindow from './v2-components/MainGameWindow/MainGameWindow.jsx';
 
 
 function App() {
-  
-
-
-  //TODO Add player and robot images on game display
 
   return (
     <main>
